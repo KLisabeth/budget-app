@@ -10,4 +10,10 @@ function eventListeners() {
         event.preventDefault();
         ui.submitBudgetForm();
     });
+
+    expenseForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        ui.submitExpenseForm();
+    });
+    
 }
