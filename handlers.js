@@ -126,5 +126,20 @@ class UI {
         this.itemList = tempList;
         this.showBalance();
     }
-    
+    // delete expense
+  deleteExpense(element) {
+    let id = parseInt(element.dataset.id);
+    console.log(id);
+    let parent = element.parentElement.parentElement.parentElement;
+    // remove from dom
+    this.expenseList.removeChild(parent);
+
+    // delete item
+    let tempList = this.itemList.filter(function (expense) {
+        return expense.id !== id;
+    });
+
+    this.itemList = tempList;
+    this.showBalance();
+}
 }
