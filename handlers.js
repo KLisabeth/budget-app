@@ -143,3 +143,6 @@ class UI {
     this.showBalance();
 }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  eventListeners();
+});
